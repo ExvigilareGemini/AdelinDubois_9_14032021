@@ -51,6 +51,7 @@ export default class NewBill {
 
   // not need to cover this function by tests
   createBill = (bill) => {
+    console.log(this.firestore.storage);
     if (this.firestore) {
       this.firestore
       .bills()
@@ -58,7 +59,7 @@ export default class NewBill {
       .then(() => {
         this.onNavigate(ROUTES_PATH['Bills'])
       })
-      .catch(error => error)
+      .catch(error => console.log(error))
     }
   }
 }
