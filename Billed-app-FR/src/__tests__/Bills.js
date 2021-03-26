@@ -17,5 +17,16 @@ describe("Given I am connected as an employee", () => {
       const datesSorted = [...dates].sort(antiChrono)
       expect(dates).toEqual(datesSorted)
     })
+    test('Then LoadingPage should be displayed if the page is loading', () => {
+      const html = BillsUI({data : bills, loading : true})
+      document.body.innerHTML = html
+      expect(screen.getAllByText('Loading...')).toBeTruthy()
+    })
+    test('Then ErrorPage should be displayed if there is an error with its error message', () => {
+      const html = BillsUI({data : bills, loading : false, error : 'Erreur de connexion internet'})
+      const error = 'Erreur de connexion internet'
+      document.body.innerHTML = html
+      expect(screen.getAllByText(error)).toBeTruthy()
+    })
   })
 })
