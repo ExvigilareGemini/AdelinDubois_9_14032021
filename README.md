@@ -1,8 +1,6 @@
 # Sixth project of the OpenclassRooms Front-End Course
 
-[Site here](https://exvigilaregemini.github.io/AdelinDubois_9_14032021//Billed-app-FR/)
-
-A Saas service, purpose here is to debug et test the application (test driven).
+A Saas service, purpose here is to debug and test the application (test driven).
 
 # Technologies
  - HTML
